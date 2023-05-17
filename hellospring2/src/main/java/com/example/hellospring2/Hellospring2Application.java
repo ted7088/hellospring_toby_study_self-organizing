@@ -28,5 +28,6 @@ public class Hellospring2Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Hellospring2Application.class,args);
+		System.out.println("hello");
 	}
 }
