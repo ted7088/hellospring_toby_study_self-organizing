@@ -18,10 +18,10 @@ public class HelloController implements ApplicationContextAware {
     }
 
     @GetMapping("/hello")
-    public String hello(String name){
-//        SimpleHelloService helloService=new SimpleHelloService();
-//        return helloService.sayhello(name);
-        return helloService.sayhello(Objects.requireNonNull(name));
+    public String hello(String name)  {
+        if(name==null || name.trim().length()==0) throw new IllegalArgumentException();
+
+        return helloService.sayhello(name);
     }
 
     @Override

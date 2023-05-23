@@ -20,8 +20,12 @@ public class HelloControllerTest {
         HelloController helloController = new HelloController(name -> name);
 
         Assertions.assertThatThrownBy(()->{
-            String ret = helloController.hello(null);
-        }).isInstanceOf(NullPointerException.class);
+             helloController.hello(null);
+        }).isInstanceOf(IllegalArgumentException.class);
+
+        Assertions.assertThatThrownBy(()->{
+            helloController.hello("");
+        }).isInstanceOf(IllegalArgumentException.class);
 
     }
 }
