@@ -18,16 +18,17 @@ import javax.swing.*;
 public class Hellospring2Application {
 	@Bean
 	public ServletWebServerFactory servletWebServerFactory(){
+
 		return new TomcatServletWebServerFactory();
 	}
 
 	@Bean
 	public DispatcherServlet dispatcherServlet(){
+
 		return new DispatcherServlet();
 	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(Hellospring2Application.class,args);
-		System.out.println("hello");
 	}
 }

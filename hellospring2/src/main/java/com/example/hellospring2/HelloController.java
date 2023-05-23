@@ -13,12 +13,8 @@ import java.util.Objects;
 @RestController
 public class HelloController implements ApplicationContextAware {
     private final HelloService helloService;
-    private final ApplicationContext applicationContext;
-
-    public HelloController(HelloService helloService ,ApplicationContext applicationContext) {
-        this.applicationContext=applicationContext;
+    public HelloController(HelloService helloService ) {
         this.helloService = helloService;
-        System.out.println(applicationContext);
     }
 
     @GetMapping("/hello")
