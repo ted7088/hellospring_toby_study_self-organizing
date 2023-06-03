@@ -1,6 +1,6 @@
 package tobspring.helloboot;
 
-import com.example.hellospring2.HelloController;
+import tobyspring.helloboot.HelloController;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 

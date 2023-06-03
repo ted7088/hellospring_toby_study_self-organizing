@@ -1,13 +1,10 @@
-package com.example.hellospring2;
+package tobyspring.helloboot;
 
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import java.util.Objects;
 
 
 @RestController

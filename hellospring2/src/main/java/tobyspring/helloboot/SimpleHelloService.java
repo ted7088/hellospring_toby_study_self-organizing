@@ -1,9 +1,7 @@
-package com.example.hellospring2;
+package tobyspring.helloboot;
 
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-import java.util.Objects;
 @Service
 public class SimpleHelloService implements HelloService {
     @Override

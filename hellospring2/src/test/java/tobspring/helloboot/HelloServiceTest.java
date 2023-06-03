@@ -1,7 +1,7 @@
 package tobspring.helloboot;
 
-import com.example.hellospring2.HelloDecorator;
-import com.example.hellospring2.SimpleHelloService;
+import tobyspring.helloboot.HelloDecorator;
+import tobyspring.helloboot.SimpleHelloService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
