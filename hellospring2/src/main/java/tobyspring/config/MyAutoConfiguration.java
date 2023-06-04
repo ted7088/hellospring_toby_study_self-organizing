@@ -9,6 +9,7 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.CLASS)
 @Target(ElementType.TYPE)
-@Configuration
+@Configuration(proxyBeanMethods = false)
 public @interface MyAutoConfiguration {
+
 }
