@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import tobyspring.config.EnableMyAutoConfiguration;
 import tobyspring.config.autoconfig.DispatcherServletConfig;
+import tobyspring.config.autoconfig.JettyWebServerConfig;
 import tobyspring.config.autoconfig.TomcatWebServerConfig;
 
 import java.lang.annotation.ElementType;
@@ -16,7 +17,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 @Configuration
 @ComponentScan
-@Import({DispatcherServletConfig.class, TomcatWebServerConfig.class})
+@Import({DispatcherServletConfig.class, TomcatWebServerConfig.class, JettyWebServerConfig.class})
 @EnableMyAutoConfiguration
 public @interface MySpringBootApplication {
 
