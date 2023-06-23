@@ -15,7 +15,7 @@ import tobyspring.config.MyAutoConfiguration;
 @MyAutoConfiguration
 @ConditionalMyOnClass("org.apache.catalina.startup.Tomcat")
 public class TomcatWebServerConfig {
-    @Value("${contextPath}")
+    @Value("/app")
     String contextPath;
     @Bean("tomcatWebServerFactory")
     @ConditionalOnMissingBean
