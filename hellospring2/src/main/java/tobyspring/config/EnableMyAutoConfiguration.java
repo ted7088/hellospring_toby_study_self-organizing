@@ -11,6 +11,6 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-@Import({DispatcherServletConfig.class, TomcatWebServerConfig.class})
+@Import({DispatcherServletConfig.class, TomcatWebServerConfig.class,MyAutoConfigImportSelector.class})
 public @interface EnableMyAutoConfiguration {
 }
