@@ -15,7 +15,6 @@ public class ServerPropertiesConfig {
 //        properties.setPort(Integer.parseInt(env.getProperty("port")));
 
 //        return properties;
-
         return Binder.get(env).bind("", ServerProperties.class).get();
     }
 }
