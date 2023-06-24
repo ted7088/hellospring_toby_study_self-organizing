@@ -18,7 +18,6 @@ public class DataSourceConfig {
         SimpleDriverDataSource dataSource = new SimpleDriverDataSource();
 
         dataSource.setDriverClass((Class<? extends Driver>) Class.forName(properties.getDriverClassName()));
-
         dataSource.setUrl(properties.getUrl());
         dataSource.setUsername(properties.getUsername());
         dataSource.setPassword(properties.getPassword());
