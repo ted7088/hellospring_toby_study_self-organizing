@@ -6,6 +6,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import tobyspring.config.autoconfig.DataSourceConfig;
 import tobyspring.helloboot.HellobootApplication;
@@ -16,7 +17,7 @@ import java.sql.SQLException;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = HellobootApplication.class)
-@PropertySource("classpath:/application.properties")
+@TestPropertySource("classpath:/application.properties")
 public class DataSourceTest {
     @Autowired DataSource dataSource;
 
