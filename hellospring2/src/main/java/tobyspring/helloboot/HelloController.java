@@ -4,7 +4,10 @@ package tobyspring.helloboot;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.annotation.EnableMBeanExport;
 import org.springframework.web.bind.annotation.*;
+
+import javax.xml.namespace.QName;
 
 
 @RestController
@@ -24,5 +27,10 @@ public class HelloController implements ApplicationContextAware {
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         System.out.println(applicationContext);
+    }
+
+    @GetMapping("/conunt")
+    public String count(String name){
+        return name + ":"+helloService.countOf(name);
     }
 }

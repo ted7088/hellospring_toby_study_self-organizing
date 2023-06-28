@@ -1,6 +1,8 @@
 package tobspring.helloboot;
 
+import tobyspring.helloboot.Hello;
 import tobyspring.helloboot.HelloDecorator;
+import tobyspring.helloboot.HelloRepository;
 import tobyspring.helloboot.SimpleHelloService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -25,7 +27,17 @@ import java.lang.annotation.Target;
 public class HelloServiceTest {
     @UnitTest// 어노테이션 ㅇ만들기 단위테스트
     void simpleHelloService(){
-        SimpleHelloService helloService = new SimpleHelloService();
+        SimpleHelloService helloService = new SimpleHelloService(new HelloRepository() {
+            @Override
+            public Hello findHello(String name) {
+                return null;
+            }
+
+            @Override
+            public void increasesCount(String name) {
+
+            }
+        });
 
         String ret = helloService.sayhello("Test");
 
