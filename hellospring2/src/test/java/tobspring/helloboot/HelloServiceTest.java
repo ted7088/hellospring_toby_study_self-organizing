@@ -1,11 +1,11 @@
 package tobspring.helloboot;
 
+import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Test;
 import tobyspring.helloboot.Hello;
 import tobyspring.helloboot.HelloDecorator;
 import tobyspring.helloboot.HelloRepository;
 import tobyspring.helloboot.SimpleHelloService;
-import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.Test;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
